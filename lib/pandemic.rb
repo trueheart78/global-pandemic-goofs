@@ -27,7 +27,7 @@ class Pandemic
         'general',
         'germfree',
         'ghostly',
-        'goulish',
+        'ghoulish',
         'ghastly',
         'gilded',
         'glamourous',
