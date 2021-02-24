@@ -2,12 +2,85 @@
 
 class Pandemic
   def self.goof
-    ['global', [self.concoction, self.business].sample].join ' '
+    [self.g_adjective, [self.concoction, self.business].sample].join ' '
   end
 
   class << self
     def concoction
       [ self.p_word, self.place ]
+    end
+
+    def g_adjective
+      [
+        'global',
+        'gawky',
+        'garish',
+        'gaudy',
+        'gassy',
+        'gentle',
+        'genital',
+        'geothermal',
+        'general',
+        'germfree',
+        'ghostly',
+        'goulish',
+        'ghastly',
+        'gilded',
+        'glamourous',
+        'gleaming',
+        'glossy',
+        'gloomy',
+        'glowing',
+        'glorified',
+        'glued',
+        'glittering',
+        'glorious',
+        'gluttonous',
+        'gnarly',
+        'gold',
+        'gooey',
+        'gossipy',
+        'golden',
+        'goofy',
+        'gorgeous',
+        'gothic',
+        'godforsaken',
+        'goosey',
+        'gratuitous',
+        'grilled',
+        'grotesque',
+        'gruesome',
+        'grumpy',
+        'grim',
+        'gritty',
+        'gruff',
+        'grungy',
+        'graceless',
+        'grand',
+        'graphical',
+        'gratifying',
+        'greased',
+        'grimy',
+        'grizzled',
+        'groovy',
+        'grumbling',
+        'grating',
+        'grieving',
+        'grizzly',
+        'grueling',
+        'gradual',
+        'grainy',
+        'grandiose',
+        'grassy',
+        'grisly',
+        'groggy',
+        'gruelling',
+        'guarded',
+        'gutless',
+        'gummy',
+        'gutsy',
+        'gyroscopic'
+      ].sample
     end
 
     def p_word
@@ -28,7 +101,8 @@ class Pandemic
         'picture',
         'photo',
         'plant',
-        'paddlefish'
+        'paddlefish',
+        'pony'
       ].sample
     end
 
@@ -54,6 +128,13 @@ class Pandemic
         'path',
         'plant'
       ].sample
+    end
+
+    def item
+      [
+        # concat this with place to then take a sample?
+        'album', # is this really worth it?
+      ]
     end
 
     def business
