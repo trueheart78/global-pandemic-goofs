@@ -10,13 +10,35 @@ class GoofSite < Sinatra::Base
          <title>Pandemic Goofs</title>
          <link rel='shortcut icon' type='image/png' href='icons/microbe.png'/>
        </head>
+       <style>
+       p, span {
+         font-family: Arial;
+         font-size: 14pt;
+       }
+
+       </style>
+       <script>
+       function copyPandemicGoof() {
+         var r = document.createRange();
+         r.selectNode(document.getElementById('pandemicGoof'));
+         window.getSelection().removeAllRanges();
+         window.getSelection().addRange(r);
+         document.execCommand('copy');
+         window.getSelection().removeAllRanges();
+
+         document.getElementById('goofCopier').innerText = 'Copied Goof!';
+       }
+       </script>
        <body style='background-color:#ffdead;'>
          <div align='center' style='font-family: Arial;font-size: 14pt;'>
            <p>Instead of saying, <br />\"In this global pandemic?\"</p>
 
-           <p>Try saying, <br />\"#{Pandemic.goof}\"</p>
+           <p>Try saying, <br />\"<span id='pandemicGoof' style='cursor:pointer;' onclick='copyPandemicGoof()'>#{Pandemic.goof}</span>\"</p>
 
-           <p><a href='/' style='color: black;font-family: Arial;font-size: 10pt;'>refresh</a></p>
+           <p>
+             <a href='#' style='color: black;font-family: Arial;font-size: 10pt;' onclick='copyPandemicGoof()' id='goofCopier'>Copy Goof</a> -
+             <a href='/' style='color: black;font-family: Arial;font-size: 10pt;'>New Goof</a>
+           </p>
          </div>
 
          <div align='center' style='margin-top:300px;'>
