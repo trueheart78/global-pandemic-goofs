@@ -2,12 +2,16 @@
 
 class Pandemic
   def self.goof
-    [self.g_adjective, [self.concoction, self.business].sample].join ' '
+    "In this #{self.g_adjective} #{self.result}?"
   end
 
   class << self
+    def result
+      [self.concoction, self.business].sample
+    end
+
     def concoction
-      [ self.p_word, self.place ]
+      [ self.p_word, self.place ].join ' '
     end
 
     def g_adjective

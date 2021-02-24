@@ -4,7 +4,17 @@ require 'lib/pandemic'
 
 class GoofSite < Sinatra::Base
   get '/' do
-    ['In this ', Pandemic.goof, '?'].join
+    "<!DOCTYPE html>
+     <html>
+       <head>
+         <title>Pandemic Goofs</title>
+       </head>
+       <body>
+         <div align='center' style='font-family: Arial;font-size: 14pt;'>
+           #{Pandemic.goof}
+         </div>
+       </body>
+     </html>"
   end
 
   get '/api' do
