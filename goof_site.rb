@@ -9,26 +9,26 @@ class GoofSite < Sinatra::Base
        <head>
          <title>Pandemic Goofs</title>
          <link rel='shortcut icon' type='image/png' href='icons/microbe.png'/>
-       </head>
-       <style>
-       p, span {
-         font-family: Arial;
-         font-size: 14pt;
-       }
+         <style>
+         p, span {
+           font-family: Arial;
+           font-size: 14pt;
+         }
 
-       </style>
-       <script>
-       function copyPandemicGoof() {
-         var r = document.createRange();
-         r.selectNode(document.getElementById('pandemicGoof'));
-         window.getSelection().removeAllRanges();
-         window.getSelection().addRange(r);
-         document.execCommand('copy');
-         window.getSelection().removeAllRanges();
+         </style>
+         <script>
+         function copyPandemicGoof() {
+           var r = document.createRange();
+           r.selectNode(document.getElementById('pandemicGoof'));
+           window.getSelection().removeAllRanges();
+           window.getSelection().addRange(r);
+           document.execCommand('copy');
+           window.getSelection().removeAllRanges();
 
-         document.getElementById('goofCopier').innerText = 'Copied Goof!';
-       }
+           document.getElementById('goofCopier').innerText = 'Goof Copied!';
+         }
        </script>
+       </head>
        <body style='background-color:#ffdead;'>
          <div align='center' style='font-family: Arial;font-size: 14pt;'>
            <p>Instead of saying, <br />\"In this global pandemic?\"</p>
@@ -43,6 +43,7 @@ class GoofSite < Sinatra::Base
 
          <div align='center' style='margin-top:300px;'>
            <a href='/api' target='_blank' style='color: black;font-family: Arial;font-size: 10pt;'>Check out our awesome API</a>
+         </div>
        </body>
      </html>"
   end
