@@ -13,6 +13,9 @@ class GoofSite < Sinatra::Base
 
   get '/' do
     @goof = Pandemic.goof
+    @url = Env.host(request)
+    @image = [@url, 'images', 'microbe.png'].join '/'
+    @domain = Env.domain(request)
     erb :index
   end
 

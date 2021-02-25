@@ -15,6 +15,10 @@ class Env
     request.base_url
   end
 
+  def self.domain(request)
+    request.base_url.sub('https://','').sub('http://','')
+  end
+
   def self.force_ssl?(request)
     self.production? && !request.ssl?
   end
