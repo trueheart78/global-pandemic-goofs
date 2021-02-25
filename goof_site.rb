@@ -36,8 +36,33 @@ class GoofSite < Sinatra::Base
     output = []
     Files.full_list.each do |file|
       lines = `wc -l data/#{file}.txt`.to_i
-      output << "There are #{lines} lines in data/#{file}.txt<br />"
+      output << "There are #{lines} lines in <a href='/contents/#{file}'>data/#{file}.txt</a><br />"
     end
-    output.join
+    "<html>
+      <head>
+        <title>Development Status</title>
+      </head>
+      <body style='font-family: Courier New;'>
+        <h4>Development Status</h4>
+        #{output.join}
+      </body>
+    </html>"
+  end
+
+  get '/contents/:filename' do
+    redirect '/' unless Env.development?
+    file = "data/#{params['filename']}.txt"
+
+    halt(404, '<div style="font-family: Courier New;">404 - Invalid filename</div>') unless File.exist? file
+
+    "<html>
+      <head>
+        <title>#{file}</title>
+      </head>
+      <body style='font-family: Courier New;'>
+        <h4>#{file}</h4>
+        #{File.readlines(file).join('<br />')}
+      </body>
+    </html>"
   end
 end
