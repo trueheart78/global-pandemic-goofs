@@ -1,4 +1,31 @@
-pony
 paddlefish
-pirahna
+panda
+panther
+parakeet
+parrot
+partridge
+peacock
+peccary
+pelican
 penguin
+pheasant
+pig
+pigeon
+pika
+pike
+piranha
+platypus
+poison Dart Frog
+polar Bear
+polecat
+pony
+porcupine
+prairie Dog
+prawn
+praying Mantis
+proboscis Monkey
+puff Adder
+puffer Fish
+puffin
+puma
+python
