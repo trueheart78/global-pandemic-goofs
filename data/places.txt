@@ -1,18 +1,27 @@
-training camp
 armory
+appartment
+bed
+concert hall
+couch
+express
 factory
-warehouse
-school
-office
+garage
+hotel
+insurance agency
 law firm
 library
-study hall
-bed
 living room
-van down by the river
-concert hall
-phylactery
-express
-restaurant
+loft
+motel
+office
 park
 plant
+phylactery
+restaurant
+river side
+school
+study hall
+training camp
+van
+van down by the river
+warehouse

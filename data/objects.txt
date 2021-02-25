@@ -1,9 +1,10 @@
-pipe
-pygmy
-paper clip
 package
 page
 paper
-picture
+paper clip
 photo
+piano
+picture
+pipe
 plant
+pygmy
