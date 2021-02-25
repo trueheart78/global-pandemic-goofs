@@ -15,17 +15,17 @@ pika
 pike
 piranha
 platypus
-poison Dart Frog
-polar Bear
+poison dart frog
+polar bear
 polecat
 pony
 porcupine
-prairie Dog
+prairie dog
 prawn
-praying Mantis
-proboscis Monkey
-puff Adder
-puffer Fish
+praying mantis
+proboscis monkey
+puff adder
+puffer fish
 puffin
 puma
 python
