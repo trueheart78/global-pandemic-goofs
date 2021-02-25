@@ -30,6 +30,14 @@ class GoofSite < Sinatra::Base
 
   get '/status' do
     redirect '/' unless Env.development?
-    Env.host(request)
+    # Env.host(request)
+    require 'files'
+
+    output = []
+    Files.full_list.each do |file|
+      lines = `wc -l data/#{file}.txt`.to_i
+      output << "There are #{lines} lines in data/#{file}.txt<br />"
+    end
+    output.join
   end
 end

@@ -1,0 +1,6 @@
+parsnip
+pea
+pepper
+pinto bean
+potato
+pumpkin

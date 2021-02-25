@@ -1,156 +1,34 @@
 # frozen_string_literal: true
 
+require 'type'
+
 class Pandemic
   def self.goof
-    "In this #{self.g_adjective} #{self.result}?"
+    "In this #{self.adjective} #{self.noun}?"
   end
 
   class << self
-    def result
-      [self.concoction, self.business].sample
+    def type
+      Type.new.detect_type
     end
 
-    def concoction
-      [ self.p_word, self.place ].join ' '
+    def adjective
+      File.readlines('data/adjectives.txt').sample.chomp
     end
 
-    def g_adjective
+    def noun
+      current_type = self.type
+
       [
-        'global',
-        'gawky',
-        'garish',
-        'gaudy',
-        'gassy',
-        'gentle',
-        'genital',
-        'geothermal',
-        'general',
-        'germfree',
-        'ghostly',
-        'ghoulish',
-        'ghastly',
-        'gilded',
-        'glamourous',
-        'gleaming',
-        'glossy',
-        'gloomy',
-        'glowing',
-        'glorified',
-        'glued',
-        'glittering',
-        'glorious',
-        'gluttonous',
-        'gnarly',
-        'gold',
-        'gooey',
-        'gossipy',
-        'golden',
-        'goofy',
-        'gorgeous',
-        'gothic',
-        'godforsaken',
-        'goosey',
-        'gratuitous',
-        'grilled',
-        'grotesque',
-        'gruesome',
-        'grumpy',
-        'grim',
-        'gritty',
-        'gruff',
-        'grungy',
-        'graceless',
-        'grand',
-        'graphical',
-        'gratifying',
-        'greased',
-        'grimy',
-        'grizzled',
-        'groovy',
-        'grumbling',
-        'grating',
-        'grieving',
-        'grizzly',
-        'grueling',
-        'gradual',
-        'grainy',
-        'grandiose',
-        'grassy',
-        'grisly',
-        'groggy',
-        'gruelling',
-        'guarded',
-        'gutless',
-        'gummy',
-        'gutsy',
-        'gyroscopic'
-      ].sample
+        File.readlines("data/#{current_type}.txt").sample.chomp,
+        self.place(current_type)
+      ].compact.join ' '
     end
 
-    def p_word
-      [
-        'paladin',
-        'pizza',
-        'paparazzi',
-        'penguin',
-        'pipe',
-        'pygmy',
-        'pineapple',
-        'panini',
-        'paper clip',
-        'pinto bean',
-        'package',
-        'page',
-        'paper',
-        'picture',
-        'photo',
-        'plant',
-        'paddlefish',
-        'pony'
-      ].sample
-    end
+    def place(current_type)
+      return if current_type == :businesses
 
-    def place
-      [
-        'training camp',
-        'armory',
-        'factory',
-        'warehouse',
-        'school',
-        'office',
-        'law firm',
-        'library',
-        'study hall',
-        'bed',
-        'living room',
-        'van down by the river',
-        'concert hall',
-        'phylactery',
-        'express',
-        'restaurant',
-        'park',
-        'path',
-        'plant'
-      ].sample
-    end
-
-    def item
-      [
-        # concat this with place to then take a sample?
-        'album', # is this really worth it?
-      ]
-    end
-
-    def business
-      [
-        'Panda Express',
-        'Papa John\'s',
-        'Pizza Hut',
-        'Penn Station',
-        'Priceline.com',
-        'Petsmart',
-        'P.F. Chang\'s'
-      ].sample
+      File.readlines('data/places.txt').sample.chomp
     end
   end
 end
