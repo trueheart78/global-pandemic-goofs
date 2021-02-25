@@ -16,6 +16,7 @@ class GoofSite < Sinatra::Base
     @url = Env.host(request)
     @image = [@url, 'images', 'microbe.png'].join '/'
     @domain = Env.domain(request)
+
     erb :index
   end
 
@@ -33,7 +34,7 @@ class GoofSite < Sinatra::Base
 
   get '/status' do
     redirect '/' unless Env.development?
-    # Env.host(request)
+
     require 'files'
 
     output = []
@@ -41,6 +42,7 @@ class GoofSite < Sinatra::Base
       lines = `wc -l data/#{file}.txt`.to_i
       output << "There are #{lines} lines in <a href='/contents/#{file}'>data/#{file}.txt</a><br />"
     end
+
     "<html>
       <head>
         <title>Development Status</title>
@@ -54,9 +56,11 @@ class GoofSite < Sinatra::Base
 
   get '/contents/:filename' do
     redirect '/' unless Env.development?
-    file = "data/#{params['filename']}.txt"
 
-    halt(404, '<div style="font-family: Courier New;">404 - Invalid filename</div>') unless File.exist? file
+    file = "data/#{params['filename']}.txt"
+    unless File.exist? file
+      halt 404, '<div style="font-family: Courier New;">404 - Invalid filename</div>'
+    end
 
     lines = File.readlines(file)
 
@@ -69,5 +73,14 @@ class GoofSite < Sinatra::Base
         #{lines.join('<br />')}
       </body>
     </html>"
+  end
+
+  # catch-all routes
+  get '/*' do
+    redirect '/'
+  end
+
+  post '/*' do
+    404
   end
 end
