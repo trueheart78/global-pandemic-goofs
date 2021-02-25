@@ -55,13 +55,15 @@ class GoofSite < Sinatra::Base
 
     halt(404, '<div style="font-family: Courier New;">404 - Invalid filename</div>') unless File.exist? file
 
+    lines = File.readlines(file)
+
     "<html>
       <head>
         <title>#{file}</title>
       </head>
       <body style='font-family: Courier New;'>
-        <h4>#{file}</h4>
-        #{File.readlines(file).join('<br />')}
+        <h4>#{file} (#{lines.count} entries)</h4>
+        #{lines.join('<br />')}
       </body>
     </html>"
   end
