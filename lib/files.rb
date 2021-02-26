@@ -8,4 +8,8 @@ class Files
   def self.weighted_list
     %i(businesses animals foods fruits drinks vegetables objects professions sports)
   end
+
+  def self.lines(file_type)
+    `wc -l data/#{file_type}.txt`.to_i
+  end
 end

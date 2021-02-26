@@ -31,7 +31,7 @@ class Type
 
     @files.each do |file|
       start_at = @total_lines + 1
-      line_count = lines(file)
+      line_count = Files.lines(file)
       if line_count > 0
         @total_lines += line_count
         @weightings[file] = {start: start_at, end: @total_lines}
@@ -42,10 +42,6 @@ class Type
   def reset_vars
     @weightings = {}
     @total_lines = 0
-  end
-
-  def lines(file)
-    `wc -l data/#{file}.txt`.to_i
   end
 end
 

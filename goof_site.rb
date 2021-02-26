@@ -39,17 +39,22 @@ class GoofSite < Sinatra::Base
 
     output = []
     Files.full_list.each do |file|
-      lines = `wc -l data/#{file}.txt`.to_i
-      output << "There are #{lines} lines in <a href='/contents/#{file}'>data/#{file}.txt</a><br />"
+      lines = Files.lines(file)
+      output << "There are #{lines} lines in <a href='/contents/#{file}'>data/#{file}.txt</a>"
     end
 
-    "<html>
+    "<!DOCTYPE html>
+    <html>
       <head>
         <title>Development Status</title>
       </head>
       <body style='font-family: Courier New;'>
-        <h4>Development Status</h4>
-        #{output.join}
+        <div style='margin-left:10px;'>
+          <h4>Development Status</h4>
+          <ul style='padding-left:10px;'>
+            <li>#{output.join("</li>\n            <li>")}</li>
+          </ul>
+        </div>
       </body>
     </html>"
   end
@@ -64,13 +69,18 @@ class GoofSite < Sinatra::Base
 
     lines = File.readlines(file)
 
-    "<html>
+    "<!DOCTYPE html>
+    <html>
       <head>
         <title>#{file}</title>
       </head>
       <body style='font-family: Courier New;'>
-        <h4>#{file} (#{lines.count} entries)</h4>
-        #{lines.join('<br />')}
+        <div style='margin-left:10px;'>
+          <h4>#{file} (#{lines.count} entries)</h4>
+          <ol>
+            <li>#{lines.map(&:chomp).join("</li>\n            <li>")}</li>
+          </ol>
+        </div>
       </body>
     </html>"
   end
