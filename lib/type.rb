@@ -4,7 +4,7 @@ require 'files'
 
 class Type
   def initialize
-    @files = Files.weighted_list.shuffle
+    @files = Files.weighted_list
   end
 
   def detect_type
