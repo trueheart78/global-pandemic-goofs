@@ -43,13 +43,6 @@ pistachio
 pita
 pizza
 praline
-prawns
-pretzel
-profiterole
-prosciutto
-purloo
-puree
-punch
 poi
 polenta
 pollock
@@ -68,3 +61,12 @@ potage
 potato
 potpie
 pottage
+poultry
+prawns
+pretzel
+profiterole
+prosciutto
+pudding
+puree
+pumpernickel
+punch
