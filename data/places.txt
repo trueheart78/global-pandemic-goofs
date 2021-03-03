@@ -1,40 +1,74 @@
 armory
-appartment
+apartment
+bathtub
+bathroom
+battlefield
 bed
+bedroom
+car
 castle
+college
 concert hall
-couch
+cup
+day spa
 den
+delivery van
+dining room
+doctor’s office
+dueling hall
+eighteen wheeler
 elevator
+emergency room
+emergency waiting room
 express
 factory
 farm
+field
 fort
 garage
+guest room
+home
+hospital
+hospital room
 hotel
+hotel room
+hotline
+house
 insurance agency
+kitchen
+lake
 law firm
+laundromat
 library
 living room
 loft
 mall
 motel
+motel room
 nuclear power plant
+ocean
 office
+outlet mall
 park
 plant
 phylactery
-psychic hotline
 pyramid
 restaurant
 river
 sauna
 school
+spa
+stairwell
+station
 store
 study hall
 training camp
 trapeze school
+university
 van
 van down by the river
+wagon
+waiting room
+wasteland
 warehouse
 werewolf den
