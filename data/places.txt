@@ -1,15 +1,28 @@
+airplane
 airport
 armory
 apartment
+backyard barbecue
+bank
+barbershop
+barn
 bathtub
 bathroom
 battlefield
 bed
 bedroom
+bistro
+broadway play
+campus
 car
 castle
+cemetery
+cinema
+coffin
 college
+compound
 concert hall
+conga line
 cup
 day spa
 den
@@ -25,9 +38,15 @@ express
 factory
 farm
 field
+forrest
 fort
 garage
+go-kart
+graveyard
 guest room
+heaven
+hell
+history class
 home
 hospital
 hospital room
@@ -35,7 +54,9 @@ hotel
 hotel room
 hotline
 house
+hut
 insurance agency
+jail
 kitchen
 lake
 law firm
@@ -44,32 +65,60 @@ library
 living room
 loft
 mall
+math class
 motel
 motel room
+movie
+movie theater
 nuclear power plant
 ocean
 office
 outlet mall
+paradise
 park
-plant
+pet cemetery
+photo center
+photo hut
 phylactery
+plant
+police station
+podcast
+prison
+purgatory
 pyramid
+racetrack
 restaurant
 river
+salon
+sarcophagus
 sauna
 school
+shop
+shopping center
 spa
+spaceship
+stadium
 stairwell
 station
 store
+studio apartment
 study hall
+theater
+tower
+train car
 training camp
 trapeze school
+trolley
+tv show
+ufo
 university
 van
 van down by the river
+video
 wagon
 waiting room
 wasteland
 warehouse
 werewolf den
+wolf den
+woods
