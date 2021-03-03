@@ -1,10 +1,15 @@
 armory
 appartment
 bed
+castle
 concert hall
 couch
+den
+elevator
 express
 factory
+farm
+fort
 garage
 hotel
 insurance agency
@@ -12,18 +17,24 @@ law firm
 library
 living room
 loft
+mall
 motel
 nuclear power plant
 office
 park
 plant
 phylactery
+psychic hotline
 pyramid
 restaurant
 river
+sauna
 school
+store
 study hall
 training camp
+trapeze school
 van
 van down by the river
 warehouse
+werewolf den
