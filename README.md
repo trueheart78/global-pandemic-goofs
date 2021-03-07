@@ -1,8 +1,8 @@
-# Global Pandemic Goofs
+# Global Pandemic Goofs :microbe:
 
-Goofs in regards to what to call the Global Pandemic, because we are all a little crazy here.
+Goofs in regards to what to call the Global Pandemic, because we're all a little crazy here.
 
-![taylor.gif][taylor crazy]
+![crazy - blank space - taylor swift][crazy taylor]
 
 ## Running the Server
 
@@ -16,7 +16,7 @@ bundle exec shotgun
 You can also run it via basic Ruby.
 
 ```
-bundle exec ruby server.rb
+bundle exec ruby goof_site.rb
 ```
 
-[taylor crazy]: assets/images/crazy-blank-space-taylor-swift.gif
+[crazy taylor]: assets/images/crazy-blank-space-taylor-swift.gif
