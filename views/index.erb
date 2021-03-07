@@ -19,9 +19,17 @@
 
     <link rel='shortcut icon' type='image/png' href='icons/microbe.png'/>
     <style>
-      p, span {
+      body {
+        background-color: #FFDEAD;
+      }
+      div, p, span {
         font-family: Arial;
         font-size: 14pt;
+      }
+      a {
+        color: black;
+        font-family: Arial;
+        font-size: 10pt;
       }
     </style>
     <script>
@@ -37,20 +45,20 @@
       }
     </script>
   </head>
-  <body style='background-color:#ffdead;'>
-    <div align='center' style='font-family: Arial;font-size: 14pt;'>
+  <body>
+    <div align='center'>
       <p>Instead of saying, <br />"In this global pandemic?"</p>
 
       <p>Try saying, <br />"<span id='pandemicGoof' style='cursor:pointer;' onclick='copyPandemicGoof()'><%= @goof %></span>"</p>
 
       <p>
-        <a href='#' style='color: black;font-family: Arial;font-size: 10pt;' onclick='copyPandemicGoof()' id='goofCopier'>Copy Goof</a> -
-        <a href='/' style='color: black;font-family: Arial;font-size: 10pt;'>New Goof</a>
+        <a href='#' onclick='copyPandemicGoof()' id='goofCopier'>Copy Goof</a> -
+        <a href='/'>New Goof</a>
       </p>
     </div>
 
     <div align='center' style='margin-top:300px;'>
-      <a href='/api' target='_blank' style='color: black;font-family: Arial;font-size: 10pt;'>Check out our awesome API</a>
+      <a href='/api' target='_blank'>Check out our awesome API</a>
     </div>
   </body>
 </html>
