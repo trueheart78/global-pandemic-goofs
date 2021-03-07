@@ -7,7 +7,7 @@ require 'pandemic'
 class GoofSite < Sinatra::Base
   before do
     if Env.force_ssl?(request)
-      redirect request.url.sub('http', 'https')
+      redirect request.url.sub('http', 'https'), 308
     else
       @url = Env.host(request)
       @image = [@url, 'images', 'microbe.png'].join '/'
