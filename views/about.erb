@@ -32,33 +32,16 @@
         font-size: 10pt;
       }
     </style>
-    <script>
-      function copyPandemicGoof() {
-        var r = document.createRange();
-        r.selectNode(document.getElementById('pandemicGoof'));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-
-        document.getElementById('goofCopier').innerText = 'Goof Copied!';
-      }
-    </script>
   </head>
   <body>
     <div align='center'>
-      <p>Instead of saying, <br />"In this global pandemic?"</p>
-
-      <p>Try saying, <br />"<span id='pandemicGoof' style='cursor:pointer;' onclick='copyPandemicGoof()'><%= @goof %></span>"</p>
-
-      <p>
-        <a href='#' onclick='copyPandemicGoof()' id='goofCopier'>Copy Goof</a> -
-        <a href='/'>New Goof</a>
-      </p>
+      <p>This abomination of a website was created because of the absurdness of this global pandemic.</p>
+      
+      <p>At one point, this pandemic will pass, and then this site will be useless (and gone), so goof on it while you can.</p>
     </div>
-
+    
     <div align='center' style='margin-top:300px;'>
-      <a href='/api' target='_blank'>Check out our awesome API</a> - <a href='/about'>About</a>
+      <a href='/'>Goofs</a> - <a href='/api' target='_blank'>Check out our awesome API</a>
     </div>
   </body>
 </html>

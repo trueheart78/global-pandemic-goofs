@@ -8,16 +8,21 @@ class GoofSite < Sinatra::Base
   before do
     if Env.force_ssl?(request)
       redirect request.url.sub('http', 'https')
+    else
+      @url = Env.host(request)
+      @image = [@url, 'images', 'microbe.png'].join '/'
+      @domain = Env.domain(request)
     end
   end
 
   get '/' do
     @goof = Pandemic.goof
-    @url = Env.host(request)
-    @image = [@url, 'images', 'microbe.png'].join '/'
-    @domain = Env.domain(request)
 
     erb :index
+  end
+  
+  get '/about' do
+    erb :about
   end
 
   get '/api' do
