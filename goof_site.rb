@@ -20,7 +20,7 @@ class GoofSite < Sinatra::Base
 
     erb :index
   end
-  
+
   get '/about' do
     erb :about
   end
@@ -41,19 +41,19 @@ class GoofSite < Sinatra::Base
     redirect '/' unless Env.development?
 
     require 'files'
-    
+
     @output = []
     Files.full_list.each do |filename|
       lines = Files.lines(filename)
       @output << "There are #{lines} lines in <a href='/contents/#{filename}'>data/#{filename}.txt</a>"
     end
 
-    erb :status
+    erb :status, layout: :dev_layout
   end
 
   get '/contents/:filename' do
     redirect '/' unless Env.development?
-    
+
     @filename = params['filename']
     file_path = "data/#{@filename}.txt"
     unless File.exist? file_path
@@ -61,8 +61,8 @@ class GoofSite < Sinatra::Base
     end
 
     @lines = File.readlines(file_path)
-    
-    erb :contents
+
+    erb :contents, layout: :dev_layout
   end
 
   # catch-all routes

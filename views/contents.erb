@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= @filename %></title>
-    <%= erb :_icons %>
-    <style>
-      body {
-        background-color: #FFF0F5;
-        font-family: 'Courier New';
-      }
-    </style>
-  </head>
-  <body>
-    <div style='margin-left:10px;'>
-      <h4><%= @filename %> (<%= @lines.count %> entries)</h4>
-      <ol>
-        <li><%= @lines.map(&:chomp).join("</li>\n            <li>") %></li>
-      </ol>
-    </div>
-  </body>
-</html>
+<h4><%= @filename %> (<%= @lines.count %> entries)</h4>
+<ol>
+  <li><%= @lines.map(&:chomp).join("</li>\n  <li>") %></li>
+</ol>

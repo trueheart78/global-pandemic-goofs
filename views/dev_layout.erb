@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @filename %></title>
+    <%= erb :_icons %>
+    <style>
+      body {
+        background-color: #FFF0F5;
+        font-family: 'Courier New';
+      }
+    </style>
+  </head>
+  <body>
+    <div style='margin-left:10px;'>
+      <%= yield %>
+    </div>
+  </body>
+</html>

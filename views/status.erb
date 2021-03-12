@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Development Status</title>
-    <%= erb :_icons %>
-    <style>
-      body {
-        background-color: #FFF0F5;
-        font-family: 'Courier New';
-      }
-      a {
-        color: black;
-      }
-    </style>
-  </head>
-  <body>
-    <div style='margin-left:10px;'>
-      <h4>Development Status</h4>
-      <ul style='padding-left:10px;'>
-        <li><%= @output.join("</li>\n            <li>") %></li>
-      </ul>
-    </div>
-  </body>
-</html>
+<h4>Development Status</h4>
+<ul style='padding-left:10px;'>
+  <li><%= @output.join("</li>\n  <li>") %></li>
+</ul>

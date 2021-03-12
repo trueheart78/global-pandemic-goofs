@@ -1,57 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Pandemic Goofs</title>
-    <!-- facebook open graph tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= @url %>" />
-    <meta property="og:title" content="Pandemic Goofs" />
-    <meta property="og:description" content="Silly things to call the global pandemic when you just don't want to be serious. Imagine being serious... in this gruff physicist training camp?" />
-    <meta property="og:image" content="<%= @image %>" />
+<div align='center'>
+  <p>
+    This abomination of a website was created because<br />
+    of the absurdness of this global pandemic.
+  </p>
+  
+  <p>
+    At one point, this pandemic will pass, and then this<br />
+    site will be useless (and gone), so goof on it while you can.
+  </p>
+  
+  <p>
+    <img src="/images/microbe.png" alt="microbe" />
+  </p>
+</div>
 
-    <!-- twitter card tags additive with the og: tags -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="<%= @domain %>" />
-    <meta property="twitter:title" content="Pandemic Goofs" />
-    <meta property="twitter:description" content="Silly things to call the global pandemic when you just don't want to be serious. Imagine being serious... in this gruff physicist training camp?" />
-    <meta property="twitter:image" content="<%= @image %>" />
-    <meta property="twitter:url" content="<%= @url %>" />
-
-    <%= erb :_icons %>
-    <style>
-      body {
-        background-color: #FFDEAD;
-      }
-      div, p, span {
-        font-family: Arial;
-        font-size: 14pt;
-      }
-      a {
-        color: black;
-        font-family: Arial;
-        font-size: 10pt;
-      }
-    </style>
-  </head>
-  <body>
-    <div align='center'>
-      <p>
-        This abomination of a website was created because<br />
-        of the absurdness of this global pandemic.
-      </p>
-      
-      <p>
-        At one point, this pandemic will pass, and then this<br />
-        site will be useless (and gone), so goof on it while you can.
-      </p>
-      
-      <p>
-        <img src="/images/microbe.png" alt="microbe" />
-      </p>
-    </div>
-    
-    <div align='center' style='margin-top:300px;'>
-      <a href='/'>Goofs</a> - <a href='/api' target='_blank'>Check out our awesome API</a>
-    </div>
-  </body>
-</html>
+<div align='center' style='margin-top:78px;'>
+  <a href='/'>Goofs</a> -
+  <a href='/api' target='_blank'>Check out our awesome API</a>
+</div>

@@ -1,64 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Pandemic Goofs</title>
-    <!-- facebook open graph tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= @url %>" />
-    <meta property="og:title" content="Pandemic Goofs" />
-    <meta property="og:description" content="Silly things to call the global pandemic when you just don't want to be serious. Imagine being serious... in this gruff physicist training camp?" />
-    <meta property="og:image" content="<%= @image %>" />
+<script>
+  function copyPandemicGoof() {
+    var r = document.createRange();
+    r.selectNode(document.getElementById('pandemicGoof'));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
 
-    <!-- twitter card tags additive with the og: tags -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="<%= @domain %>" />
-    <meta property="twitter:title" content="Pandemic Goofs" />
-    <meta property="twitter:description" content="Silly things to call the global pandemic when you just don't want to be serious. Imagine being serious... in this gruff physicist training camp?" />
-    <meta property="twitter:image" content="<%= @image %>" />
-    <meta property="twitter:url" content="<%= @url %>" />
+    document.getElementById('goofCopier').innerText = 'Goof Copied!';
+  }
+</script>
+<div align='center'>
+  <p>Instead of saying, <br />"In this global pandemic?"</p>
 
-    <%= erb :_icons %>
-    <style>
-      body {
-        background-color: #FFDEAD;
-      }
-      div, p, span {
-        font-family: Arial;
-        font-size: 14pt;
-      }
-      a {
-        color: black;
-        font-family: Arial;
-        font-size: 10pt;
-      }
-    </style>
-    <script>
-      function copyPandemicGoof() {
-        var r = document.createRange();
-        r.selectNode(document.getElementById('pandemicGoof'));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(r);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
+  <p>Try saying, <br />"<span id='pandemicGoof' style='cursor:pointer;' onclick='copyPandemicGoof()'><%= @goof %></span>"</p>
 
-        document.getElementById('goofCopier').innerText = 'Goof Copied!';
-      }
-    </script>
-  </head>
-  <body>
-    <div align='center'>
-      <p>Instead of saying, <br />"In this global pandemic?"</p>
+  <p>
+    <a href='#' onclick='copyPandemicGoof()' id='goofCopier'>Copy Goof</a> -
+    <a href='/'>New Goof</a>
+  </p>
+</div>
 
-      <p>Try saying, <br />"<span id='pandemicGoof' style='cursor:pointer;' onclick='copyPandemicGoof()'><%= @goof %></span>"</p>
-
-      <p>
-        <a href='#' onclick='copyPandemicGoof()' id='goofCopier'>Copy Goof</a> -
-        <a href='/'>New Goof</a>
-      </p>
-    </div>
-
-    <div align='center' style='margin-top:300px;'>
-      <a href='/api' target='_blank'>Check out our awesome API</a> - <a href='/about'>About</a>
-    </div>
-  </body>
-</html>
+<div align='center' style='margin-top:300px;'>
+  <a href='/about'>About</a> -
+  <a href='/api' target='_blank'>Check out our awesome API</a> 
+</div>
