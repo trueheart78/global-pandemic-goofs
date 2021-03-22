@@ -6,6 +6,8 @@ require 'pandemic'
 
 class GoofSite < Sinatra::Base
   before do
+    headers 'Referrer-Policy' => 'strict-origin-when-cross-origin'
+
     if Env.force_ssl?(request)
       redirect request.url.sub('http', 'https'), 308
     else
