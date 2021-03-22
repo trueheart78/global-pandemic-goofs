@@ -1,15 +1,4 @@
-<script>
-  function copyPandemicGoof() {
-    var r = document.createRange();
-    r.selectNode(document.getElementById('pandemicGoof'));
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(r);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-
-    document.getElementById('goofCopier').innerText = 'Goof Copied!';
-  }
-</script>
+<script type="text/javascript" src="/javascript/main.js"></script>
 <div align='center'>
   <p>Instead of saying, <br />"In this global pandemic?"</p>
 
