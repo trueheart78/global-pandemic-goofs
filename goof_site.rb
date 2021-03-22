@@ -76,6 +76,8 @@ class GoofSite < Sinatra::Base
     404
   end
 
+  private
+
   def set_header_restrictions
     # strict-origin-when-cross-origin is also valid
     headers 'Referrer-Policy' => 'no-referrer'
@@ -85,5 +87,6 @@ class GoofSite < Sinatra::Base
     headers 'X-Frame-Options' => 'sameorigin'
     headers 'X-Permitted-Cross-Domain-Policies' => 'none'
     headers 'X-XSS-Protection' => '0'
+    headers 'Permissions-Policy' => "geolocation=(self \"#{Env.domain(request)}\"), microphone=()"
   end
 end
