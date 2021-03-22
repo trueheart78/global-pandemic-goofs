@@ -8,6 +8,7 @@ class GoofSite < Sinatra::Base
   before do
     headers 'Referrer-Policy' => 'strict-origin-when-cross-origin'
     headers 'Strict-Transport-Security' => 'max-age=16070400; includeSubDomains'
+    headers 'X-Xss-Protection' => '0'
 
     if Env.force_ssl?(request)
       redirect request.url.sub('http', 'https'), 308
