@@ -1,14 +1,14 @@
 class Env
   def self.production?
-    ENV['RACK_ENV'] == 'production'
+    ENV['APP_ENV'] == 'production'
   end
 
   def self.development?
-    ENV['RACK_ENV'] == 'development'
+    ENV['APP_ENV'] == 'development'
   end
 
   def self.test?
-    ENV['RACK_ENV'] == 'test'
+    ENV['APP_ENV'] == 'test'
   end
 
   def self.host(request)
