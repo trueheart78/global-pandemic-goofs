@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Heroku needs this. Keep this in sync with .ruby-version
-ruby '2.7.4'
+ruby '3.1.2'
 
 gem 'puma'
 gem 'shotgun'
