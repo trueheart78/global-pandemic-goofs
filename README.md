@@ -12,12 +12,6 @@ If you queue up Puma it will run without issue.
 bundle exec puma
 ```
 
-You can also run it via basic Ruby.
-
-```
-bundle exec ruby goof_site.rb
-```
-
 ### Legacy
 
 It was designed to be run with `Shotgun`, to enable code reloading
