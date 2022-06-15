@@ -6,6 +6,5 @@ source 'https://rubygems.org'
 ruby '3.1.2'
 
 gem 'puma'
-gem 'shotgun'
 gem 'sinatra'
 gem 'sinatra-contrib'

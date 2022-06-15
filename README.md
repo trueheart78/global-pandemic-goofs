@@ -6,17 +6,25 @@ Goofs in regards to what to call the Global Pandemic, because we're all a little
 
 ## Running the Server
 
-It is designed to be run with `Shotgun`, to enable code reloading
-without having to restart the server.
+If you queue up Puma it will run without issue.
 
 ```
-bundle exec shotgun
+bundle exec puma
 ```
 
 You can also run it via basic Ruby.
 
 ```
 bundle exec ruby goof_site.rb
+```
+
+### Legacy
+
+It was designed to be run with `Shotgun`, to enable code reloading
+without having to restart the server, but is no longer supported as of Ruby 3.0.
+
+```
+bundle exec shotgun
 ```
 
 [crazy taylor]: assets/images/crazy-blank-space-taylor-swift.gif
